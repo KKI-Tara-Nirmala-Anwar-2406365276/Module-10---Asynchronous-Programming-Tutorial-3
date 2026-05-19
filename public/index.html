@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yewchat!</title>
+</head>
+<body>
+<script type="module">
+    import init, { run_app } from "./pkg/index.js";
+
+    async function main() {
+        await init();
+        run_app();
+    }
+
+    main();
+</script>
+</body>
+</html>
