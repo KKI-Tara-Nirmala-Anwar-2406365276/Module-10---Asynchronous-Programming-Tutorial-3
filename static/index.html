@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Yewchat!</title>
-    </head>
-    <body>
-        <script src="yewchat.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tara's Creative WebChat</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe, #fce7f3);
+            color: #1f2937;
+        }
+
+        body::before {
+            content: "Tara's Creative WebChat";
+            display: block;
+            margin-bottom: 12px;
+            padding: 18px;
+            border-radius: 18px;
+            background: white;
+            color: #1e3a8a;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        }
+
+        body::after {
+            content: "A simple asynchronous chat client built with Rust, Yew, and WebSocket.";
+            display: block;
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #374151;
+            text-align: center;
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #94a3b8;
+        }
+
+        button {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<script type="module">
+    import init, { run_app } from "./pkg/index.js";
+
+    async function main() {
+        await init();
+        run_app();
+    }
+
+    main();
+</script>
+</body>
 </html>
